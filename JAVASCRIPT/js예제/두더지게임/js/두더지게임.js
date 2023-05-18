@@ -64,6 +64,7 @@ let gameScript = {
                 
             }, 1000);
             
+            
             setInterval(function(){
             
                 if(gameScript.time > 0){
@@ -71,7 +72,7 @@ let gameScript = {
                     gameScript.moleShow();
                 }
                 
-            }, 1500);
+            }, 900);
             
             
         }, 1000); 
