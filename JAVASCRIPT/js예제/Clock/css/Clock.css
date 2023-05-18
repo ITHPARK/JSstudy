@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+
+.clock-wrap {padding:  50px; border-bottom:  1px solid #ddd;}
+.clock-wrap h3 {margin-bottom:  20px; font-size: 32px; font-weight:  700;}
+.clock-wrap select {display:  inline-block; margin-bottom: 40px;}
+.clock-wrap .txt {margin-bottom: 10px;}
+.clock-wrap .time-write {font-size: 22px; font-weight: 700; color: #333;}
+
+.clock-wrap .analog_clock {position: relative; width: 600px; height: 600px; background: url(../iamges/analogClock.png)no-repeat center;}
+.clock-wrap .analog_clock span {display: inline-block; position: absolute; left: 50%; top: 50%; transform-origin: center bottom;} 
+.clock-wrap .analog_clock .hour {width: 4px; height: 180px; background-color: #000; margin-left: -2px; margin-top: -180px;}
+.clock-wrap .analog_clock .minute {width: 4px; height: 230px; background-color: #000 ; margin-left: -2px; margin-top: -230px;}  
+.clock-wrap .analog_clock .second {width: 2px; height: 230px; background-color: red; margin-left: -1px; margin-top: -230px;}
+
+
+
+

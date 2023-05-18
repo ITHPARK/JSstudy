@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		//전역 변수
+		var vscope = 'global';
+
+		function fscope() {
+
+			//지역 변수 (이 변수의 값은 fscope 함수 안에서만 사용이 가능하다 )
+			let vscope = 'local';
+
+			let abc = (123123);
+
+			console.log('지역변수 vscope의 값 : ' + vscope);
+			//일단 fscope함수 안에 선언된 변수를 먼저 찾고 없을 시 script 태그안에 전역변수를 찾게 된다
+		}
+
+		fscope(); 
+		//fscope에서 생성된 vscope의 값인 local이 출려된다
+
+		console.log('전역변수 scope의 값 : ' + vscope); 
+		//함수 밖에서 생성된 vscope의 값 인 'global이 출력된다'
+
+		//console.log(abc); //abc라는 변수는 fscope 함수 안에 선언이 되어서  console은 abc를 찾으 수 없다고 뜬다
+
+	</script>
+</body>
+</html> 

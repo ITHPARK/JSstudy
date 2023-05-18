@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script type="text/javascript" src="script.js"></script>
+	<!-- js파일 불러온다 script태그를 가져오는 것과 동일함 -->
+
+	<!--
+		 **node.js의 모듈화 (node.js는 서버쪽 자바스크립트 코드)
+
+		node.circle.js (로드될 대상)
+		
+
+		node.demo.js (로드의 주체)
+
+		node.js가 제공하는 requier이라는 함수를 제공하고 
+		그 함수의 인자값으로 지정된 파일을 불러온다
+
+		ex) console.log(circle.area(4));
+
+		circle이라는 파일의 exports.area();라는 함수를 불러온다
+		exports = 함수의 이름이 아님.
+
+		-->
+
+	 
+	<script></script>
+
+
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function welcome(){
+			return 'Hello  world'
+		}
+
+		alert(welcome());
+	</script>
+</body>
+</html>

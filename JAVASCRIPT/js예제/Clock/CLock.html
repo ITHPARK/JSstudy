@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+	<link rel="stylesheet" href="../../resource/css/jquery-ui.min.css">
+	<link rel="stylesheet" href="../../resource/css/reset.css">
+	<link rel="stylesheet" href="css/Clock.css">
+
+	<script src="../../resource/js/jquery-3.6.0.min.js"></script>
+	<script src="../../resource/js/jquery-ui.min.js"></script>
+	<script src="js/Clock.js"></script>
+
+	<title>Clock</title>
+</head>
+<body>
+
+	<div class="clock-wrap"> 
+		<h3>세계 시간</h3> 
+
+		<select id="timeSel" onchange="script.worldTimeList(this.options[this.selectedIndex].text)">
+
+			<!-- 방법2 매개변수에 this를 넣는다 -->
+			<!-- 방법3 매개변수에 this.options[this.selectedIndex].text를 넣는다 -->
+			<option value="9">한국</option>
+			<option value="1">영국</option> 
+			<option value="4">미국</option>
+			<option value="9">일본</option>
+			<option value="8">중국</option>
+		</select>
+
+
+		<p class="txt"><span>한국</span>의 현재 시간은</p>
+		<p class="time-write">
+			
+		</p>
+
+		<p class="time-write2">
+			
+		</p>
+
+	</div>
+	
+	
+	<div class="clock-wrap">
+	
+		<h3>아날로그 시계</h3>
+		
+		<div class="analog_clock">
+			<span class="hour"></span>
+			<span class="minute"></span>
+			<span class="second"></span>
+		</div>
+		
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>객체</title>
+
+	
+</head>
+<body>
+	
+
+	<div class="btn_list">
+		<button class="btn" onclick="grades.active()">이름</button>
+		<button class="btn" onclick="grades.active()">나이</button>
+	</div>
+	
+	
+
+	<script>
+
+		
+
+		//객체
+		let grades = {
+			//{}사이의 값 = 객체
+			//egoing, k8805, sorialgi = 객체의 key
+			//10, 8, 80 = 객체 key의 value 값
+			'list' : {'egoing' : "Lee", 'k8805' : 8, 'sorialgi' : 80}, //  
+			'show': function(){
+				for(let a in this.list){
+					console.log(a , this.list[a]);
+				}
+			},
+			//grades변수안에 show라는 객체를 생성해서 함수로 만듬
+			//안에 for문을 돌려서 grades 변수안에 list객체의 값들을 console로 출력
+			//여기서 this는 grades라는 객체를 가리킴
+
+			//내가 누른 태그에 인덱스 값 구하고 인덱스 값에 따라 객체 키 값 출력 
+			active: function(){
+
+				const boxs = document.querySelectorAll(".btn_list button");
+				let index;
+
+				console.log(boxs);
+
+				boxs.forEach(el => {
+
+					el.onclick = (e) => {
+
+						//parentElement = 해당요소의 부모요소를 타겟함
+						//children =  해당요소의 모든 자식요소를 타겟함
+						//parentElement.children 함으로써 div태그 안에 모든 button 요소를 가져옴
+						const nodes = [...e.target.parentElement.children];
+
+						console.log(e.target.parentElement, nodes);
+
+						index = nodes.indexOf(e.target); 
+
+						if(index === 0) {
+							console.log(1);
+							console.log(this.list["egoing"]);
+						}else if(index === 1) {
+							console.log(2);
+							console.log(this.list["k8805"]);
+						}
+
+						
+						alert(`선택한 박스의 index는 ${index}입니다.`);
+					}
+					
+				});
+			}
+			//
+		}
+		//객체를 호출하는 방식 2가지
+		grades['show']();
+		grades.show();
+
+		//객체 생성 하기
+		let newObj = new Object;
+
+		//객체 프로퍼티 추가하기
+		//성생된 객체명.키 이름 = "키 값" ;
+		newObj.name = 'park';
+		newObj.age = '23';
+		newObj.weight = '123kg';
+		console.log(newObj);
+
+		//for in 문으로 객체 프로퍼티 출력
+		for (let v in newObj){
+			console.log(v,': ' +  newObj[v]);
+		}
+		//name : park
+		//age : 23
+		//weight : 123kg
+
+		//동일한 객체를 참조하는 두 변수 
+		let OBJa = {
+			val : 30
+		}
+		let OBJb = OBJa;
+
+		console.log(OBJa.val);
+		console.log(OBJb.val);
+
+		OBJb.val = 60;
+		//OBJb.val 값을 변경해주면 동일한 객체를 참조하던 OBJa.val의 값도 변경된다
+		console.log(OBJa.val);
+		console.log(OBJb.val);
+		
+		//객체 비교, 객체의 프로퍼티 값이 아닌 참조값을 비교할 때 
+		//같은 객체를 참조하면
+		console.log(OBJa == OBJb); //true;
+
+		//다만 참조하는 객체가 다르면 false를 출력함
+		let OBJc = {val : 60};
+		console.log(OBJb == OBJc); //false
+
+		//객체 함수 호출하기
+		let a = 100;
+		let obja = {value : 100}
+
+		function changVal (num, ob){
+			num = 300;
+			ob.value = 300;
+
+			console.log(num); //300
+			console.log(ob); //value: 300
+		}
+		changVal(a, obja);
+
+		console.log(a);	//100
+		console.log(obja); //value: 300
+
+		//함수를 실행할 때 기본 타입의 경우는 함수의 매개변수로 복사된 값이 전달되기 때문에 매개변수 값을 변경해도 실제로 호출된 변수의 값은 변하지 않는다.
+		//다만 객체와 같은 참조 타입 변수는 기본 타입처럼 복사되지 않고 그대로 값이 함수 내부로 전달되어 함수 내부에서 값을 변경하게되면 프로퍼티 값도 변경되게된다.
+
+
+
+	</script>
+	
+</body>
+</html>

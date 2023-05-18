@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+.table-wrap h3 {text-align:  center; padding-top: 100px;}
+.table-wrap h3 .text-muted {display:  inline-block; font-size:  18px;}
+.table-wrap {width:  1200px; margin: 0 auto;}
+.table-wrap #btn-all-close {float: right; margin: -50px 0 10px;}
+
+.table-wrap tbody .faq-txt {text-align:  left;}
+.table-wrap tbody .faq-txt > p {color:  cyan; margin-bottom:  0;}
+.table-wrap tbody .faq-txt .faq-answer { display:  block; height:  0;  overflow: hidden; transition: all 1.2s ease;}  
+.table-wrap tbody .faq-txt .faq-answer p:first-child {margin-top: 1rem;}
+.table-wrap tbody .faq-txt .faq-answer.active {display: block;  height:  300px; }

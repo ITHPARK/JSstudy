@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+</head>
+<body>
+	<script>
+		//자바스크립트의 연산자
+
+		//대입 연산자
+		 let a = 1; //변수 a의 값은 1 
+		 console.log(1);
+		
+		 //비교 연산자 (true/false (boolean데이터 타입))
+		 //주어진 값들을 비교해서 true 또는 false 라는 결과를 내준다.
+		 // true 와 flase는 boolean(참과 거짓을 의미하는 데이터 타입)데이터 중 하나이다.
+		let b = 1; 
+		let c = 3;
+		document.write('let b = 1<br>');  //true
+		document.write('let c = 3' );  //true
+
+		// 좌항과 우항보다 작으면 true 아니면 false
+		document.write('<p>비교연산자 b < c = ' + (b < c) + '</p>' );  //true
+
+		// 좌항과 우항보다 작거나 같으면 true 아니면 false
+		document.write('<p>비교연산자 b <= c = ' + (b <= c) + '</p>' );  //true
+		
+		// 좌항과 우항보다 크면 true 아니면 false
+		document.write('<p>비교연산자 b > c =' + (b > c) + '</p>'); //false
+
+		// 좌항과 우항보다 크거나 같으면 true 아니면 false
+		document.write('<p>비교연산자 b >= c =' + (b >= c) + '</p>'); //false
+		
+		// 좌항과 우항이 같으면 true 아니면 false
+		document.write('<p>비교연산자 b == c =' + (b == c) + '</p>'); //false
+		
+		// 좌항과 우항이 같지 않으면 true 아니면 false
+		document.write('<p>비교연산자 b != c =' + (b != c) + '</p><br><br><br>') // true
+
+		//동등연산자 (==), 일치 연산자 (===)
+		//(==)  좌항과 우항이 일치하면 true 아니면 false<br
+		document.write('동등 연산자<br>')
+		document.write('<p>동등 연산자 b == c =' + (b == c) + '</p>'); //false
+		document.write('<p>동등 연산자 b == 1 =' + (b == 1) + '</p><br><br>'); //true
+		document.write('일치 연산자<br>')
+		document.write('<p>일치 연산자 1 === "1" =' + (1 === '1') + '</p>'); //true
+		document.write('<p>일치 연산자 1 === "1" =' + (1 === '1') + '</p>'); //false
+		//일치 연산자는 데이터 타입도 같이야 함 따라서 숫자1 과 문자'1'은 다르기 때문에 false를 출력
+
+		document.write('<br><br><br>')
+		//null과 undefined
+		//null과 undefined는 둘다 값이 없음을 나타내지만
+		//null은 작성자가 의도적으로 값을 정의 하지 않은 상태
+		//undefined 는 작성자가 의도치 않게 값을 정의 하지 않은 상태 이렇게 구분이 가능하다
+		document.write('null과 undefined<br>')
+		document.write('<p>null == undefined  =' + (null == undefined) + '</p>'); //true
+		document.write('<p>null === undefined  =' + (null == undefined) + '</p>'); //false
+		
+		// 데이터의 값은 같지만 타입은 다르기 때문에 일치 연산자를 사용하면 false를 반환한다.
+		document.write('<br><br><br>');
+
+		document.write('true와 숫자 데이터<br>')
+		//true와 1 또는 다른숫자
+		//자바스크립트에서는 1은 true값으로 설정하고 1이외에 숫자들을 false로 설정을 했다
+		//따라서 동등연산자를 사용하면 숫자1과 문자1은 true 값을 반환한다
+		//하지만 boolean데이터인 true 와 일치 연산자로 비교를하면 숫자 또는 문자 타입인 1은 false를 반환하게 된다.
+		
+		document.write('<p>true == 1  =' + (true == 1) + '</p>'); //true
+		document.write('<p>true == "1"  =' + (true == "1") + '</p>'); //true
+		document.write('<p>true === 1  =' + (true === 1) + '</p>'); //false
+		document.write('<p>true === "1"  =' + (true === "1") + '</p>'); //false
+		document.write('<p>true == 2  =' + (true == 2) + '</p>'); //false
+		document.write('<p>true == 3  =' + (true == 3) + '</p>'); //false
+		document.write('<a href=" http://dorey.github.io/JavaScript-Equality-Table/">==와 ===의 차이점</a>')
+	
+
+		document.write('<br><br><br>');
+
+		document.write('부정 연산자')
+		//!=는 부정을 의미 ==와 반대의 결과를 보여준다.
+
+		document.write('<p>1 != 2  =' + (1 != 2) + '</p>'); //true
+		document.write('<p>1 != "1"  =' + (1 != "1") + '</p>'); //false
+		document.write('<p>"a" != "a"  =' + ("a" != "a") + '</p>'); //true
+		document.write('<p>"a" != "b"  =' + ("a" != "b") + '</p>'); //false
+		
+
+		
+		
+		
+
+		
+
+
+		
+
+		
+
+
+
+
+
+
+
+
+
+
+
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script>
+
+		//this: 해당 함수 호출 방식에 따라 this에 바인딩 되는 객체가 달라짐.
+		//호출 방식은 4가지다.
+		//1. (일반)함수 호출
+		//2. 메서드 호출
+		//3. 생성자 함수 호출(객체 생성 함수)
+		//4. apply/call/bind 호출
+
+		//1. 함수 호출 - 내부함수는 일반 함수, 메소드, 콜백함수 어디에서 선언되었든 관게없이 this는 전역객체를 바인딩한다.
+		//전역 객체 = window
+		const foo = function(){
+			let foo2 = function(){
+				console.log(this); //내부함수도 tihs는 전역객체를 가르킴
+				console.log(this.location.href); 
+			}
+			return foo2;
+		}
+
+		let func = foo(); // window
+		func();
+
+
+		//2. 메소드 호출 - 메소드 : 객체의 값이 함수로 이루어진 경우 해당 메소드를 소유한 객체에 바인딩 된다
+		
+		let person = {
+			name: 'Park Tae Hyun',
+			printName: function() {
+				console.log(this.name);
+				//this는 printName를 소유한 person 객체를 바인딩 한다.
+			}
+		}
+
+		person.printName();
+		
+
+	</script>
+
+	<title>Document</title>
+</head>
+<body>
+
+
+	
+</body>
+</html>
