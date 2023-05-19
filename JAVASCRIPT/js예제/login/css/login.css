@@ -1,5 +1,49 @@
 @charset "utf-8";
 
-.wrap { position: relative; width: 1200px; margin: 0 auto; }
+.wrap { position: relative; width: 1200px; margin: 50px auto 0; padding-top: 100px;  }
 .wrap .top {width: 100%;}
-.wrap .top h1 {position: absolute;}
+.wrap .top h1 {position: absolute; right: 0; top: 0; font-size: 32px; font-weight: bold;}
+.wrap.login .content {width:500px; padding: 50px; margin: 0 auto; text-align: center; border: 1px solid #ddd; border-radius: 15px; }
+.wrap.login .content h3 {text-align: center; font-size: 32px; font-weight: 600;}
+.wrap.login .content form {margin-top: 40px;}
+.wrap.login .content form span {display: block; width: 100%; margin-bottom: 10px; }
+.wrap.login .content form span input[type="text"] {display: inline-block; width: 100%; padding: 10px 15px;} 
+.wrap.login .content form span input[type="text"]::placeholder {color: #9f9f9f;}
+.wrap.login .content .btn_login {display: block; width: 100%; margin: 20px 0 10px; color: #fff; font-size: 16px; font-weight: 500;; line-height: 45px; background-color: #3477eb;}
+.wrap.login .content a {font-size: 14px; font-weight: 300; color: #7c7c7c;}
+
+/* newAcc */
+.wrap.newAcc .content {width: 900px; margin: 0 auto; text-align: center;}
+.wrap.newAcc .content h3 {padding-bottom: 25px; font-size: 36px; font-weight: 600; text-align: left; }
+.wrap.newAcc .content .form_newAcc {width: 100%; padding: 25px 0 40px; border-bottom: 2px solid #000; border-top: 2px solid #000;}
+.wrap.newAcc .content dl { width: 100%; margin-bottom: 20px;}
+.wrap.newAcc .content dl:last-of-type {margin-bottom: 0;}
+/* .wrap.newAcc .content dl:first-of-type {border-top: 1px solid #ddd;} */
+.wrap.newAcc .content dl dt { display: block; width: 250px; font-size: 15px; font-weight: 600; line-height: 36px; text-align: left; }
+.wrap.newAcc .content dl dt::before {content: "* "; color: red;}
+.wrap.newAcc .content dl dd { text-align: left; }
+.wrap.newAcc .content dl dd input {display: inline-block; width: 250px; padding: 6px 12px; font-size: 14px; border: 1px solid #dbdbdb; outline: none; }
+.wrap.newAcc .content dl dd .checkPw { display: none; margin-top: 8px; font-size: 13px; font-weight: 300;}
+.wrap.newAcc .content dl dd .checkPw.active {display: block;}
+.wrap.newAcc .content dl dd .checkPw.c_r {color: red;}
+.wrap.newAcc .content dl dd .checkPw.c_b {color: cornflowerblue;}
+
+.wrap.newAcc .content .btn_newAcc {display: inline-block; width: 250px; margin-top: 40px; font-size: 18px; color: #fff; font-weight: 500;  line-height: 55px; background-color: #3477eb; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

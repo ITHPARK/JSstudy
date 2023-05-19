@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../../resource/css/reset.css">
+    <link rel="stylesheet" href="./css/login.css">
+    
+    <title>예제 | 회원가입</title>
+    
+    
+</head>
+<body>
+    <div class="wrap newAcc">
+
+        
+        <div class="content">
+        
+            <h3>회원가입</h3>
+            
+            <div class="form_newAcc">
+                <dl>
+                    <dt>아이디</dt>
+                    <dd>
+                        <input type="text" id="newId" onkeyup="loginScript.setData(event)">
+                    </dd>
+                </dl>
+                
+                <dl>
+                    <dt>비밀번호</dt>
+                    <dd>
+                        <input type="password" id="newPw" onkeyup="loginScript.setData(event)">
+                    </dd>
+                </dl>
+                
+                <dl>
+                    <dt>비밀번호 확인</dt>
+                    <dd>
+                        <input type="password" id="newPwChk" onkeyup="loginScript.setData(event)">
+                        <span class="checkPw c_o">비밀번호가 일치하지 않습니다</span>
+                    </dd>
+                </dl>
+                
+                
+                <dl>
+                    <dt>이메일</dt>
+                    <dd>
+                        <input type="email" id="newEmail" onkeyup="loginScript.setData(event)">
+                    </dd>
+                </dl>
+            </div>
+            
+            <button class="btn_newAcc" onclick = "loginScript.completeAcc()">
+                회원가입
+            </button>
+            
+        </div>
+    </div>
+    
+    
+    <script src="./js/login.js"></script>
+    
+</body>
+</html>

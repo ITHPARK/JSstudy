@@ -4,12 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../../resource/css/reset.css">
+    <link rel="stylesheet" href="./css/login.css">
+    
     <title>예제 | 로그인</title>
+    
+    
 </head>
 <body>
-    <div class="wrap">
+    <div class="wrap login">
         <div class="top">
-            <h1>localStorage를 활용한 로그인 예제</h1>
+            <h1>회원가입부터 해주세요</h1>
         </div>
         
         <div class="content">
@@ -17,19 +23,22 @@
             
             <form>
                 <span>
-                    <input type="text" id="id" placeholder="아이디를 입력해주세요">
+                    <input type="text" id="id" placeholder="아이디를 입력해주세요" onkeyup="loginScript.login(event)">
                 </span>
                 
                 <span>
-                    <input type="text" id="pw" placeholder="비밀번호를 입력해주세요">
+                    <input type="text" id="pw" placeholder="비밀번호를 입력해주세요" onkeyup="loginScript.login(event)">
                 </span>
             </form>
             
-            <button class="btn_login">로그인</button>
+            <button class="btn_login" onclick="loginScript.login(event)">로그인</button>
     
-            <a href="javascript:void(0)">회원가입</a>
+            <a onclick="loginScript.linkNewAccountPage();">회원가입</a>
         </div>
     </div>
+    
+    
+    <script src="./js/login.js"></script>
     
 </body>
 </html>

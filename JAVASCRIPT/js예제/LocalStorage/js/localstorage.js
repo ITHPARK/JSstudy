@@ -4,8 +4,8 @@
 // 문자, 숫자를 저장할 수 있으며 최대 5MB까지 저장 가능
 
 // localStorage와 sessionStorage의 차이점
-// *localStorage는 브라우저나 탭을 닫아도 계속 유지되고
-// *sessionStorage는 브라우저나 탭을 닫으면 사라짐
+// *localStorage는 탭을 닫아도 계속 유지되고
+// *sessionStorage는 탭을 닫으면 사라짐 
 
 // 데이터 저장은 key : value 형태로 숫자, 문자 저 장가능
 
